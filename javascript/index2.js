@@ -10,7 +10,6 @@
 //         console.log(`Age: ${this.age}`);
 //         console.log(`Country: ${this.country}`);
 
-        
 //     }
 // }
 
@@ -22,37 +21,61 @@
 // person2.displayDetails()
 // person1.displayDetails()
 
-class Vehicle {
-    constructor (make ,model ,year){
-        this.make = make;
-        this.model = model;
-        this.year = year;
-    }
-    displayDetails(){
-        console.log(`Make : ${this.make}`);
-        console.log(`model : ${this.model}`);
-        console.log(`Year : ${this.year}`);
+// class Vehicle {
+//     constructor (make ,model ,year){
+//         this.make = make;
+//         this.model = model;
+//         this.year = year;
+//     }
+//     displayDetails(){
+//         console.log(`Make : ${this.make}`);
+//         console.log(`model : ${this.model}`);
+//         console.log(`Year : ${this.year}`);
 
-        
+//     }
+// }
+// class Car extends Vehicle {
+//     constructor(make ,model,year,doors){
+//         super (make ,model,year);
+//         this.doors = doors;
+//     }
+//     displayDetails(){
+//         super.displayDetails();
+//         console.log(`Doors : ${this.doors}`);
+
+//     }
+// }
+// const vehicle = new Vehicle('Ford','F-150',2020)
+// console.log('Vehile Details');
+// vehicle.displayDetails();
+// const bike = new Vehicle ('Zomoto' , 'D-233',2023)
+// const car = new Car ('Honda','Accord' , 2023 , 4)
+
+// console.log('\nCar Details');
+// car.displayDetails()
+
+class BankAccount {
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+    console.log(`A/c No. : ${accountNumber}`);
+    console.log(`Openging Balance. : ${balance}`);
+  }
+  deposit(amount) {
+    this.balance += amount;
+    console.log(`Deposit : $${amount}`);
+  }
+  withdraw(amount) {
+    if (amount <= this.balance) {
+      this.balance -= amount;
+      console.log(`Withdraw : $${amount}`);
+    } else {
+      console.log(`Want to withdrawn : $${amount}`);
+      console.log(`Insufficient balance`);
     }
+  }
+  displayBalance() {
+    console.log(`Account Balance : $${this.balance}`);
+  }
 }
-class Car extends Vehicle {
-    constructor(make ,model,year,doors){
-        super (make ,model,year);
-        this.doors = doors;
-    }
-    displayDetails(){
-        super.displayDetails();
-        console.log(`Doors : ${this.doors}`);
-        
-    }
-}
-const vehicle = new Vehicle('Ford','F-150',2020)
-console.log('Vehile Details');
-vehicle.displayDetails();
-const bike = new Vehicle ('Zomoto' , 'D-233',2023)
-const car = new Car ('Honda','Accord' , 2023 , 4)
-
-console.log('\nCar Details');
-car.displayDetails()
-
+const account = new BankAccount ('SB-123',1200)
