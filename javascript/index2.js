@@ -50,7 +50,7 @@ class Car extends Vehicle {
 const vehicle = new Vehicle('Ford','F-150',2020)
 console.log('Vehile Details');
 vehicle.displayDetails();
-
+const bike = new Vehicle ('Zomoto' , 'D-233',2023)
 const car = new Car ('Honda','Accord' , 2023 , 4)
 
 console.log('\nCar Details');
