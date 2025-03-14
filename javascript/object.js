@@ -95,7 +95,8 @@ const obj1 = { a: 1, b: 2 };
 const obj2 = { b: 4, c: 3 };
 
 const mergeObj1 = { ...obj1, ...obj2 };
-console.log(mergeObj);
+const newValue = {...obj2,d:30}
+console.log(newValue);
 
 //create a complex object with multiple layers
 // const library = {
@@ -125,10 +126,36 @@ console.log(mergeObj);
 // console.log(Object.values(person));
 // console.log(Object.entries(person));
 
-const car = {
-  brand : 'Toyota',
-  model : 'Camry',
-  engine  : {type : 'V4' , horsePower : 400}
+// const car = {
+//   brand : 'Toyota',
+//   model : 'Camry',
+//   engine  : {type : 'V4' , horsePower : 400}
+// }
+// // const {engine : {type , horsePower},brand,model} = car
+// // console.log(type , horsePower,model,brand);
+
+// function logUserDetails ({name , ...details}){
+//   console.log(`Name : ${name}`);
+//   console.log('Details :',details);
+  
+  
+// }
+// logUserDetails ({
+//   name:'Alice',
+//   age:34,
+//   city : 'Newyork',
+//   profession : "Designer"
+
+// })
+// console.log(logUserDetails);
+
+const cartItem = {
+  id : 1,
+  name : "Wireless Headphones",
+  price : 100,
+  category : 'Electronics'
 }
-// const {engine : {type , horsePower},brand,model} = car
-// console.log(type , horsePower,model,brand);
+const newCartItem = {...cartItem,quantity: 2,discount:20}
+console.log(newCartItem);
+const {price ,...itemDetails} = newCartItem
+console.log(itemDetails);
