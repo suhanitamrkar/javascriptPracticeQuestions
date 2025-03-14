@@ -54,41 +54,71 @@
 // console.log('\nCar Details');
 // car.displayDetails()
 
-class Employee {
-  constructor(name, salary) {
-    this.name = name;
-    this.salary = salary;
-    console.log(`Name of the Employee : ${name}`);
-    console.log(`Monthly Salary : ${salary}`);
+// class Employee {
+//   constructor(name, salary) {
+//     this.name = name;
+//     this.salary = salary;
+//     console.log(`Name of the Employee : ${name}`);
+//     console.log(`Monthly Salary : ${salary}`);
+//   }
+//   calculateAnnualSalary() {
+//     return this.salary * 12;
+//   }
+// }
+// class Manager extends Employee {
+//   constructor(name, salary, department) {
+//     super(name, salary);
+//     this.department = department;
+//   }
+//   calculateAnnualSalary() {
+//     const baseSalary = super.calculateAnnualSalary();
+//     const bonus = 0.1;
+//     console.log(`Bonus (10% of the base salary) : ${bonus}`);
+//     return bonus * baseSalary + baseSalary;
+//   }
+// }
+
+// const manager1 = new Manager ('Angela Luca' , 5000 , 'Marketing')
+// const annualSalary1 =  manager1.calculateAnnualSalary();
+
+// console.log(`Manager : ${manager1.name}`);
+// console.log(`Department: ${manager1.department}`);
+// console.log(`Annual Salary : ${annualSalary1}`);
+
+// const manager2 = new Manager (`Jonella Rozaliya` , 5000 , 'Market officer')
+// const annualSalary2 = manager2.calculateAnnualSalary();
+
+// console.log(`Manager : ${manager2.name}`);
+// console.log(`Department : ${manager2.department}`);
+// console.log(`Annual Salary  : ${annualSalary2}`);
+
+// const manager3 = new Manager('Suhani Tamrkar',4000,'Web Development')
+// const annualSalary3 = manager3.calculateAnnualSalary();
+
+// console.log(`Manager :${manager3.name}`);
+// console.log(`Department :${manager3.department}`);
+// console.log(`Annual Salary :${annualSalary3}`);
+
+class Book {
+  constructor(title, author, publicYear) {
+    this.title = title;
+    this.author = author;
+    this.publicYear = publicYear;
   }
-  calculateAnnualSalary() {
-    return this.salary * 12;
+  bookDetail() {
+    console.log(`Title : ${this.title}`);
+    console.log(`Author : ${this.author}`);
+    console.log(`Publication Year : ${this.publicYear}`);
   }
 }
-class Manager extends Employee {
-  constructor(name, salary, department) {
-    super(name, salary);
-    this.department = department;
+class Ebook extends Book {
+  constructor(title, author, publicYear, price) {
+    super(title, author, publicYear);
+    this.price = price;
   }
-  calculateAnnualSalary() {
-    const baseSalary = super.calculateAnnualSalary();
-    const bonus = 0.1;
-    console.log(`Bonus (10% of the base salary) : ${bonus}`);
-    return bonus * baseSalary + baseSalary;
+  displayDetails (){
+    super.displayDetails();
+    console.log(`Price :$${this.price}`);
+    
   }
 }
-
-const manager1 = new Manager ('Angela Luca' , 5000 , 'Marketing')
-const annualSalary1 =  manager1.calculateAnnualSalary();
-
-console.log(`Manager : ${manager1.name}`);
-console.log(`Department: ${manager1.department}`);
-console.log(`Annual Salary : ${annualSalary1}`);
-
-const manager2 = new Manager (`Jonella Rozaliya` , 5000 , 'Market officer')
-const annualSalary2 = manager2.calculateAnnualSalary();
-
-console.log(`Manager : ${manager2.name}`);
-console.log(`Department : ${manager2.department}`);
-console.log(`Annual Salary  : ${annualSalary2}`);
-
