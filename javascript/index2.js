@@ -122,3 +122,28 @@ class Ebook extends Book {
     
   }
 }
+class BankAccount {
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+    console.log(`A/c No. : ${accountNumber}`);
+    console.log(`Openging Balance. : ${balance}`);
+  }
+  deposit(amount) {
+    this.balance += amount;
+    console.log(`Deposit : $${amount}`);
+  }
+  withdraw(amount) {
+    if (amount <= this.balance) {
+      this.balance -= amount;
+      console.log(`Withdraw : $${amount}`);
+    } else {
+      console.log(`Want to withdrawn : $${amount}`);
+      console.log(`Insufficient balance`);
+    }
+  }
+  displayBalance() {
+    console.log(`Account Balance : $${this.balance}`);
+  }
+}
+const account = new BankAccount ('SB-123',1200)
