@@ -1,33 +1,33 @@
-// //create nested object and access the deepest property
-// const user = {
-//   name: "Alice",
-//   address: {
-//     city: "Indore",
-//     longDetail: {
-//       houseNo: 33,
-//       street: "superCoridor",
-//       road: "kushwah nagar",
-//     },
-//   },
-//   information: {
-//     email: "alice300gmail.com",
-//     mobile: 900342312,
-//     isSign: {
-//       now: true,
-//       then: false,
-//     },
-//   },
-// };
+//create nested object and access the deepest property
+const user = {
+  name: "Alice",
+  address: {
+    city: "Indore",
+    longDetail: {
+      houseNo: 33,
+      street: "superCoridor",
+      road: "kushwah nagar",
+    },
+  },
+  information: {
+    email: "alice300gmail.com",
+    mobile: 900342312,
+    isSign: {
+      now: true,
+      then: false,
+    },
+  },
+};
 
 // //update a deep property inside a nested obejct
-// user.address.longDetail.houseNo = 365;
-// user.address.longDetail.road = "yadav nand nagar";
+user.address.longDetail.houseNo = 365;
+user.address.longDetail.road = "yadav nand nagar";
 
-// // console.log(user.address.longDetail.houseNo);
-// // console.log(user.address.longDetail.street);
-// // console.log(user.address.longDetail.road);
-// // console.log(user.address.city);
-// // console.log(user.name);
+// console.log(user.address.longDetail.houseNo);
+// console.log(user.address.longDetail.street);
+// console.log(user.address.longDetail.road);
+// console.log(user.address.city);
+// console.log(user.name);
 
 // //Use a  loop to iterate through a nested object
 const data = {
@@ -49,12 +49,12 @@ const {id , ...rest} = data
 
 
 
-// for (const key in data.info.skills) {
-// //   console.log(`${key} : ${data.info.skills[key]}`);
-// }
-// for (const key in user.address.longDetail) {
-// //   console.log(`${key} : ${user.address.longDetail[key]}`);
-// }
+for (const key in data.info.skills) {
+//   console.log(`${key} : ${data.info.skills[key]}`);
+}
+for (const key in user.address.longDetail) {
+//   console.log(`${key} : ${user.address.longDetail[key]}`);
+}
 
 // //create a getter and setter in an object
 const product = {
